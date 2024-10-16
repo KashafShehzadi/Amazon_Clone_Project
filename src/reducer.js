@@ -28,6 +28,28 @@ const reducer = (state, action) => {
                 ...state,
                 basket: [...state.basket, action.item],
             }
+        case "REMOVE_ITEM":
+            // return {
+            //     ...state,
+            //     basket: state.basket.filter((item) => item.id !== action.id)}
+            //this code is actully deleting the multiple itmes placed in our cart with same id
+            //like the 2 toys to buy remove same time when press remove for one ,to resolve issue the findIndex
+            const index = state.basket.findIndex(
+                (basketItem) => basketItem.id === action.id
+            );
+            let newBasket = [...state.basket];
+            if (index >= 0) {
+                newBasket.splice(index, 1);
+
+            } else {
+                console.warn(
+                    `Cant remove product (id: ${action.id}) as its not in basket!`
+                )
+            }
+            return {
+                ...state,
+                basket: newBasket
+            }
         default:
             return state;
     }

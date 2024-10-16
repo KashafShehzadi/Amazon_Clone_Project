@@ -5,15 +5,16 @@
     height: max-content;
 }
 
-.check_left img {
+.add_image {
     width: 100%;
     height: 50px;
     margin-bottom: 10px;
 }
 
 .check_left {
-    width: 70%;
+    width: 50%;
 }
+
 
 .check_title {
     margin-right: 10px;

@@ -16,7 +16,7 @@ const Header = () => {
                 <Link to="/">
                     <img className="header__logo" src="/public/logo.png" />
                 </Link>
-                <div class="header__search">
+                <div className="header__search">
                     <input type="text" placeholder="Search Amazon" className='header_searchInput' />
                     <SearchIcon className='header_searchIcon' />
                 </div>
@@ -25,11 +25,11 @@ const Header = () => {
                         <span class="upper">Hello,Sign in</span>
                         <span class="lower">Accounts and List</span>
                     </div>
-                    <div class="header__option">
+                    <div className="header__option">
                         <span class="upper">Returns</span>
                         <span class="lower">& Orders</span>
                     </div>
-                    <div class="header__option">
+                    <div className="header__option">
                         <span class="upper">Your</span>
                         <span class="lower">Prime</span>
                     </div>

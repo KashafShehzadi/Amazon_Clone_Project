@@ -4,7 +4,15 @@
     align-items: center;
     width: 100%;
     padding: 10px 20px;
+
+    /* Sticky position */
+    position: sticky;
+    top: 0;
+    /* Sticks to the top of the page */
+    z-index: 100;
+    /* Ensure it stays above other content */
 }
+
 
 .header__logo {
     width: 100px;
