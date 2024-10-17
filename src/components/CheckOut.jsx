@@ -5,13 +5,14 @@ import CheckOutProduct from '../components/CheckOutProduct.jsx';
 import { useStateValue } from '../StateProvider.jsx';
 
 const CheckOut = () => {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
     return (
         <>
             <div className="checkout">
                 <div className="check_left">
                     <img className="add_image" src="/public/front.jpg" alt="" />
                     <div>
+                        <h3>Hello, {user?.email}</h3>
                         <h2 className="check_title">Your Shoping Cart Items</h2>
                         {/*items*/}
                         {basket.map(item => (
