@@ -4,13 +4,15 @@ import SubTotal from '../components/SubTotal';
 import CheckOutProduct from '../components/CheckOutProduct.jsx';
 import { useStateValue } from '../StateProvider.jsx';
 
+import addImage from "../assets/front.jpg"
+
 const CheckOut = () => {
     const [{ basket, user }, dispatch] = useStateValue();
     return (
         <>
             <div className="checkout">
                 <div className="check_left">
-                    <img className="add_image" src="/public/front.jpg" alt="" />
+                    <img className="add_image" src={addImage} alt="" />
                     <div>
                         <h3>Hello, {user?.email}</h3>
                         <h2 className="check_title">Your Shoping Cart Items</h2>
