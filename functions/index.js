@@ -4,7 +4,7 @@ import cors from "cors";
 import Stripe from "stripe";
 
 // Initialize Stripe with your secret key
-const stripe = new Stripe("sk_test_51QBFDyK0gdPpqszMHMol0x3dCnikdbhMk4jKPJfsi5lXeE7o5rsnhwOGEiUCi7LTBFVvRXzJPCJhHzxnEV2nHgAE00imkZmot0");
+const stripe = new Stripe("");
 
 // App config
 const app = express();
