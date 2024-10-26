@@ -5,6 +5,7 @@ import "../CSS/Header.css"; // Import the stylesheet
 import { Link } from "react-router-dom";
 import { useStateValue } from '../StateProvider';
 import { getAuth, signOut } from "firebase/auth"; // Import necessary functions
+import logo from '/src/assets/logo.png';
 
 const Header = () => {
     const [{ basket, user }, dispatch] = useStateValue();
@@ -26,7 +27,7 @@ const Header = () => {
         <div className="header">
             <Link to="/">
                 <img className="header__logo"
-                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png'
+                    src={logo}
                     alt="Logo" />
             </Link>
             <div className="header__search">
@@ -40,10 +41,13 @@ const Header = () => {
                         <span className="lower">{user ? 'Sign Out' : 'Sign In'}</span>
                     </div>
                 </Link>
-                <div className="header__option">
-                    <span className="upper">Returns</span>
-                    <span className="lower">& Orders</span>
-                </div>
+                <Link to="/order">
+                    <div className="header__option">
+                        <span className="upper">Returns</span>
+                        <span className="lower">& Orders</span>
+                    </div>
+                </Link>
+
                 <div className="header__option">
                     <span className="upper">Your</span>
                     <span className="lower">Prime</span>
