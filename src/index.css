@@ -16,6 +16,9 @@ body {
     background-color: rgb(234, 237, 237);
 }
 
+html {
+    overscroll-behavior: none;
+}
 
 @media (prefers-color-scheme: light) {
     :root {

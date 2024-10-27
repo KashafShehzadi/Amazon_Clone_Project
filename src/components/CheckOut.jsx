@@ -15,7 +15,7 @@ const CheckOut = () => {
                     <img className="add_image" src={addImage} alt="" />
                     <div>
                         <h3>Hello, {user?.email}</h3>
-                        <h2 className="check_title">Your Shoping Cart Items</h2>
+                        <h2 className="check_title">{(basket.length == 0) ? "Your Cart is empty" : "Your Shopping Cart Items"}</h2>
                         {/*items*/}
                         {basket.map(item => (
 
@@ -29,9 +29,12 @@ const CheckOut = () => {
                         ))}
                     </div>
                 </div>
-                <div className="check_right">
-                    <SubTotal />
-                </div>
+                {
+                    basket.length != 0 ? (<div className="check_right">
+                        <SubTotal />
+                    </div>) : ""
+                }
+
 
             </div>
         </>

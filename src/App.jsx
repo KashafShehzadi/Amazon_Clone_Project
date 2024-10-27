@@ -12,6 +12,7 @@ import Payment from "./components/Payment.jsx";
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import Orders from "./components/Orders.jsx"
+import Footer from './components/Footer.jsx';
 
 // Initialize Stripe with your publishable key
 const stripePromise = loadStripe('pk_test_51QBFDyK0gdPpqszM58ZWaKI6lAaW5TUNKukzlTqKT26zQdulNroZsGGgCT3tRTiHDKr1ooxxWJ68gAG8dXcrpY8X00FOMSENJy');
@@ -58,6 +59,7 @@ function App() {
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
